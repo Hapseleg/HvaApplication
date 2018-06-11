@@ -1,0 +1,18 @@
+body {
+    background-color: #F79F1F;
+}
+
+.login-box {
+    position: relative;
+    
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFC312;
+    border-radius: 10px;
+  }
+
+nav {
+    background-color: #FFC312;
+}

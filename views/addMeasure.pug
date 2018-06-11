@@ -1,0 +1,25 @@
+extends layout.pug
+block body
+    div(class="login-box")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12")
+                    h1 add weight measurement
+                    form(action="/addMeasure" method="POST")
+                        label(for='weight') weight
+                            input(type="text" name="weight")
+                        br
+                        label(for='latitude') latitude
+                            input(id="latitude" type="text" name="latitude")
+                        br
+                        label(for='longitude') longitude
+                            input(id="longitude" type="text" name="longitude")
+                        br
+                        label(for='timestamp') timestamp
+                            input(id="timestamp" type="text" name="timestamp")
+                        br                        
+                        button(type="button" onclick="getLocation()") Get geolocation
+                        br
+                        button(type="submit" class="btn btn-primary") Add measurement
+    
+    script(src="/js/location.js")

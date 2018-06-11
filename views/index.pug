@@ -1,0 +1,17 @@
+extends layout.pug
+block body
+    h1 Bathroom scale app
+    div(id="chart_div" style="width: 900px; height: 500px")
+    h2 Click dots to get country
+    div(id="country") Clicked country: NONE
+    hr
+    h2 Search by date
+    label From
+        input(type="date" id="timestampPast")
+    br
+    label To
+        input(type="date" id="timestampFuture")
+    br
+    button(onclick="getWeightData()") Get data
+
+    script(src="/js/charts.js")

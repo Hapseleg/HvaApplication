@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title HVA-Application
+        link(
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        )
+        link(
+        rel="stylesheet"
+        href="/css/mycss.css"
+        )
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous")
+        script(src="https://www.gstatic.com/charts/loader.js")
+        
+    body
+        nav(class="navbar navbar-expand-lg fixed-top navbar-light" style="padding-right:0px;")
+                a(class="navbar-brand" href="/") Application
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="navbar-toggler-icon")
+
+                div(class="collapse navbar-collapse" id="navbarSupportedContent")
+                    ul(class="navbar-nav mr-auto")
+                        if(loggedIn)
+                            li(class="nav-item"): a(class="nav-link" href="/") See Overview
+                            li(class="nav-item"): a(class="nav-link" href="/addMeasure") Add Weight Measurement
+                            li(class="nav-item"): a(class="nav-link" href="/logout") Logout
+        block body

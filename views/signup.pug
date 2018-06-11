@@ -1,0 +1,17 @@
+extends layout.pug
+block body
+    div(class="login-box")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-12")
+                    h1 Sign Up
+                    form(action="/signup", method="POST")
+                        fieldset
+                            label(for='email') email
+                                input(type="email" name= 'email')
+                            br
+                            label(for='password') password
+                                input(type="password" name= 'password')
+                            br
+                            button(type="submit" class="btn btn-primary") Create User
+                    a(href='/') Go back
